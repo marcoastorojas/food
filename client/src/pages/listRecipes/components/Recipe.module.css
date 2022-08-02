@@ -1,0 +1,50 @@
+.recipe {
+    background-color: white;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    box-shadow: 0 0 10px rgb(236, 236, 236);
+    position: relative;
+}
+
+.recipe img {
+    margin-top: 10px;
+    width: 80%;
+}
+
+.listDiets {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.diet{
+    padding: 5px;
+    margin: 5px;
+    background-color: #f0f0f0;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #dbdbdb;
+    border-radius: 50px;
+}
+.healthScore{
+    background-color: rgb(150, 150, 150);
+    position: absolute;
+    color: rgb(255, 255, 255);
+    top: 0;
+    right: 0;
+    margin: 5px 20px;
+    padding: 5px 10px;  
+}
+
+@media(max-width:420px){
+    .recipe{
+        width: 300px;
+        overflow: hidden;
+    }
+}

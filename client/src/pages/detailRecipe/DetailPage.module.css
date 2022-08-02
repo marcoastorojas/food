@@ -1,0 +1,46 @@
+.modal{
+    background-color: rgb(248, 247, 200);
+    width: 90%;
+    margin: 35px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.modal img{
+    max-width: 600px;
+}
+.diets h3{
+    text-align: center;
+}
+.diet {
+    flex: 0 0 auto;
+    padding: 5px 20px;
+    border-radius: 50px;
+    background: #f0f0f0;
+    border: 1px solid #dbdbdb;
+    text-transform: capitalize;
+    color: #242424;
+    font-size: 15px;
+    margin: 5px 10px;
+}
+.listDiets{
+    display: flex;
+    flex-wrap: wrap;
+}
+.left{
+    align-self: flex-start;
+}
+.cargando{
+    margin-top: 200px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media(max-width:600px){
+    .modal img{
+        width: 90%;
+    }
+}

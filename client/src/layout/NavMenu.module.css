@@ -1,0 +1,56 @@
+.menu{
+    display: flex;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 100;
+    border-bottom: 1px solid rgb(209, 209, 209);
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+.buscar{
+    display: flex;
+}
+.buscar input{
+    height: 20px;
+}
+.logo{
+    font-family: 'Grenze Gotisch', cursive;
+    font-size: 25px;
+    background-color: yellow;
+    padding: 10px;
+}
+.menuPages{
+    display: flex;
+}
+.button{
+    text-decoration: none;
+    padding: 10px;
+    border: none;
+    color: black;
+    margin: 10px;
+    background-color: rgb(187, 187, 187);
+    border-radius: 10px;
+}
+.active{
+    background-color: rgb(90, 90, 90);
+}
+
+@media(max-width:800px){
+    .menuPages{
+        flex-direction: column;
+    }
+    
+}   
+@media(max-width:650px){
+    .menu{
+        flex-direction: column;
+    }
+    .logo{
+        width: 80%;
+        text-align: center;
+    }
+    
+}   
