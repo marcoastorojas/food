@@ -3,7 +3,7 @@
 
 export const getRecipesSpoonacularApi = async () => {
     try {
-        const resp = await fetch("https://api.spoonacular.com/recipes/complexSearch?apiKey=89975b415f604ae892240bcab3935a3b&number=100&addRecipeInformation=true")
+        const resp = await fetch("https://api.spoonacular.com/recipes/complexSearch?apiKey=69b7fad385a34b798200d637b936038e&number=100&addRecipeInformation=true")
         const { results } = await resp.json()
         const recipes = results.map((recipe) => (
             {

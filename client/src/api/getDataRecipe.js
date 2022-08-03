@@ -2,7 +2,7 @@
 
 export const getDataRecipeApi = async (id) => {
     try {
-        const resp = await fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=89975b415f604ae892240bcab3935a3b`)
+        const resp = await fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=69b7fad385a34b798200d637b936038e`)
         const data = await resp.json()
         return {
             name: data.title,
