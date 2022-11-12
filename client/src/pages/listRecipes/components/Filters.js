@@ -16,7 +16,7 @@ const Filters = () => {
     const dispatch = useDispatch()
     const state = useSelector(state => state.recipeReducer)
     useEffect(() => {
-        dispatch(getAllDiets())
+        dispatch(getRecipesUserAction())
     }, [dispatch])
     const getRecipesByType = (name, action) => {
         dispatch(action())
@@ -24,7 +24,6 @@ const Filters = () => {
     }
 
     const orderAlpha = (inverse, name) => {
-        console.log("hoal");
         dispatch(orderAlphaAction(inverse))
         dispatch(changeAlpha(name))
         dispatch(changePageAction(1))

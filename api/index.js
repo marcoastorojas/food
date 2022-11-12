@@ -19,7 +19,11 @@
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const server = require('./src/app.js');
 const {  conn } = require('./src/db.js');
+const path = require("path")
 
+server.get("*",(req,res)=>{
+  res.sendFile(path.resolve(__dirname,"public/index.html"))
+})
 // Syncing all the models at once.
 conn.sync({ force: false }).then(() => {
   server.listen(3001, () => {

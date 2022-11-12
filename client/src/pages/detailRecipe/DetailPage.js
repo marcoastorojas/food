@@ -14,14 +14,14 @@ const DetailPage = () => {
   useEffect(() => {
     if (type === "api") {
       getDataRecipeApi(id)
-        .then(info => { setData({ ...data, loggin: false, ...info }) })
+        .then(info => { setData((data)=>({ ...data, loggin: false, ...info })) })
 
     } else {
       getRecipeApi(id)
-        .then((info) => { setData({ ...data, loggin: false, ...info }) })
+        .then((info) => { setData((data)=>({ ...data, loggin: false, ...info })) })
 
     }
-  }, [data,id,type])
+  }, [id,type])
 
   return (
     <div>

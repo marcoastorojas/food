@@ -2,7 +2,7 @@ const initialState = {
     dietSelected: "",
     alphabetically: "",
     healthScore: "",
-    typeRecipe: "api",
+    typeRecipe: "usuario",
     diets: []
 }
 
@@ -47,7 +47,6 @@ export const changeDiet = (name) => {
     }
 }
 export const changeAlpha = (name) => {
-    console.log("cambiando estado alfabeticamente");
     return {
         type: "CHANGE_ALPHA",
         payload: name

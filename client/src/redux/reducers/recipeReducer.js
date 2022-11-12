@@ -20,7 +20,7 @@ let initialState = {
     diets: [],
     totalPages: 0,
     currentPage: 1,
-    recipesPage: 10
+    recipesPage: 10,
 }
 export const recipeReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -68,7 +68,10 @@ export const recipeReducer = (state = initialState, action) => {
                 currentPage: 1
             }
         case GET_RECIPES_DIET_API:
-            const list = state.allRecipes.filter(recipe => recipe.diets.includes(action.payload))
+            const list = state.allRecipes.filter(recipe => {
+                const diets = recipe.diets.map(diet => diet.name)
+                return diets.includes(action.payload.toLocaleLowerCase())
+            })
             return {
                 ...state,
                 type: "api",

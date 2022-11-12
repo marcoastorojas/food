@@ -7,6 +7,6 @@ export const getAllRecipesApi = async () => {
         return data
 
     } catch (error) {
-        return []
+        return null
     }
 }

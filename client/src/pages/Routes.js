@@ -2,7 +2,8 @@ import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
 import NavMenu from '../layout/NavMenu'
-import { getReciepesSpoonacularAction } from '../redux/actions/getRecipesByApi'
+import { getReciepesSpoonacularAction, getRecipesUserAction } from '../redux/actions/getRecipesByApi'
+import { getAllDiets } from '../redux/reducers/filterReducer'
 import DetailPage from './detailRecipe/DetailPage'
 import ListRecipes from './listRecipes/ListRecipes'
 import NewRecipePage from './newRecipePage/NewRecipePage'
@@ -10,8 +11,8 @@ import NewRecipePage from './newRecipePage/NewRecipePage'
 const Routes = () => {
     const dispatch = useDispatch()
     useEffect(()=>{
-        dispatch(getReciepesSpoonacularAction())
-    },[dispatch])
+       dispatch(getAllDiets()) 
+    },[])
     return (
         <Router>
             <NavMenu/>

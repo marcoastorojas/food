@@ -19,10 +19,12 @@ const ListRecipes = () => {
             </div>
             <Pagination numeroPaginas={state.totalPages} />
           </div>
-          :
+          :state.list?
           <div className={style.cargando}>
-            <img src='https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif?20170503175831' alt="cargando"></img>
+            {/* <img src='https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif?20170503175831' alt="cargando"></img> */}
+            No hay coincidencias con la busqueda
           </div>
+          : <h2>Algo salio mal</h2>
 
       }
     </div>

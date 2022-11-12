@@ -7,8 +7,8 @@ export const errorsForm = ({ image, ...form }, listaDietas) => {
     const { name, healthScore, overview, steps } = form
     if (name.length > 35) { errors.name = "no debe ser mas de 35 caracteres" }
     if (healthScore > 100 || healthScore < 0) { errors.healthScore = "debe estar entre 0 y 100" }
-    if (overview.length > 250) {
-        errors.overview = "no deve pasar los 250 caracteres"
+    if (overview.length > 3250) {
+        errors.overview = "no deve pasar los 3250 caracteres"
     }
     if (steps.length > 250) {
         errors.steps = "no deve pasar los 250 caracteres"
